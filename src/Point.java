@@ -28,8 +28,30 @@ public class Point {
     public void setY (int newY) {
         x = newY;
     }
-    public String Coordinate() {
+    public String coordinate() {
         return ("(" + x + "," + y + ")");
+    }
+    public String quadrant() {
+        if ( x > 0){
+            if (y > 0) {
+                return ("Quadrant I");
+            }
+            if (y < 0) {
+                return ("Quadrant IV");
+            }
+        }
+        if ( x < 0) {
+            if ( y > 0 ){
+                return("Quadrant III");
+            }
+            if ( y < 0 ) {
+                return("quadrant II");
+            }
+        }
+        if ( x == 0 && y == 0){
+            return("At Origin");
+        }
+        return ("On an axis");
     }
 
 }
